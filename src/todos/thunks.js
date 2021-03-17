@@ -17,7 +17,7 @@ export const loadTodos = () => async (dispatch, getState) => {
   }
 };
 
-export const addTodoRequest = (text) => async (dispach) => {
+export const addTodoRequest = (text) => async (dispatch) => {
   try {
     const body = JSON.stringify({ text });
     const response = await fetch('http://localhost:8080/todos', {

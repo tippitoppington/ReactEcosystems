@@ -5,6 +5,7 @@ import './NewTodoForm.css';
 
 const NewTodoForm = ({ todos, onCreatePressed }) => {
   const [inputValue, setInputValue] = useState('');
+
   return (
     <div className='new-todo-form'>
       <input
@@ -34,6 +35,7 @@ const NewTodoForm = ({ todos, onCreatePressed }) => {
 const mapStateToProps = (state) => ({
   todos: state.todos,
 });
+
 const mapDispatchToProps = (dispatch) => ({
   onCreatePressed: (text) => dispatch(addTodoRequest(text)),
 });
